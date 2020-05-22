@@ -6,8 +6,7 @@ import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.*;
 
 public class AbstractFindPathInputReaderTest {
 
@@ -28,7 +27,7 @@ public class AbstractFindPathInputReaderTest {
                                     {0, 0, 0, 0},
                                     {0, 0, 0, 0},
                                     {0, 0, 0, 0}};
-        assertEquals(testOutputMatrix, expectedMatrix);
+        assertArrayEquals(testOutputMatrix, expectedMatrix);
     }
 
     @Test
@@ -60,7 +59,7 @@ public class AbstractFindPathInputReaderTest {
                 {0, 0, 0, 1, 0, 0, 0, 1, 0},
                 {0, 0, 0, 0, 0, 0, 1, 0, 1},
                 {0, 0, 0, 0, 0, 1, 0, 1, 0}};
-        assertEquals(expectedGraphMatrix, returnedGraphMatrix);
+        assertArrayEquals(expectedGraphMatrix, returnedGraphMatrix);
     }
 
     @Test
@@ -85,7 +84,7 @@ public class AbstractFindPathInputReaderTest {
                 {'X','#','.'},
                 {'.','.','.'}
         };
-        assertEquals(expectedMapWithTrace, map);
+        assertArrayEquals(expectedMapWithTrace, map);
     }
 
     @Test
